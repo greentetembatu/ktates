@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Cetak KTA Otomatis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pencetakan Kartu Tanda Anggota (KTA)</h1>
+        <p>Silakan masukkan Nomor KTA untuk melihat pratinjau dan mengunduh kartu.</p>
+
+        <form id="ktaForm">
+            <label for="nomorKTA">Nomor KTA:</label>
+            <input type="text" id="nomorKTA" name="nomorKTA" placeholder="Cth: 2024001" required>
+            <button type="submit" id="searchButton">Cari KTA</button>
+        </form>
+
+        <p id="message" class="info-message"></p>
+
+        <div id="previewArea" class="preview-area" style="display:none;">
+            <h2>Pratinjau KTA yang Ditemukan</h2>
+            <div class="pdf-container">
+                 <iframe id="pdfPreview" width="100%" height="450px" frameborder="0"></iframe>
+            </div>
+            
+            <a id="downloadLink" href="#" target="_blank" download="KTA.pdf">
+                <button id="downloadButton">Download KTA (PDF)</button>
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
