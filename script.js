@@ -20,6 +20,7 @@ document.getElementById('ktaForm').addEventListener('submit', function(e) {
     formData.append('kta', nomorKTA); // Menambahkan Nomor KTA ke FormData
 
     // 2. Kirim permintaan ke Google Apps Script (Web App)
+    // 2. Kirim permintaan ke Google Apps Script (Web App)
     fetch(webAppUrl, {
         method: 'POST',
         // Mengirim data kembali sebagai JSON
@@ -76,4 +77,5 @@ document.getElementById('ktaForm').addEventListener('submit', function(e) {
     });
 
 });
+
 
