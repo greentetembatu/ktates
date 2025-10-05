@@ -23,11 +23,8 @@ document.getElementById('ktaForm').addEventListener('submit', function(e) {
     // 2. Kirim permintaan ke Google Apps Script (Web App)
     fetch(webAppUrl, {
         method: 'POST',
-        // Mengirim data kembali sebagai JSON
-        body: JSON.stringify({ kta: nomorKTA }),
-        headers: {
-            'Content-Type': 'application/json' // PENTING: Kembali ke JSON
-        }
+        // PENTING: Jangan set header 'Content-Type' saat menggunakan FormData!
+        body: formData 
     })
     .then(response => {
         // Cek status respons
@@ -77,5 +74,6 @@ document.getElementById('ktaForm').addEventListener('submit', function(e) {
     });
 
 });
+
 
 
