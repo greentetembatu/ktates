@@ -1,5 +1,5 @@
 // URL Web App Apps Script Anda yang sudah benar
-const webAppUrl = 'https://script.google.com/macros/s/AKfycbxp-KepQaGoJhhEdLG9Q-w7lUod-3Pwm8oKvT-AtV9k8UL5CA6Z_iqzXv6gcNrmOfKK6w/exec'; 
+const webAppUrl = 'https://script.google.com/macros/s/AKfycby78-IAR6ZRD5xu4sSUbGY3bakhxn8oMgcY56RqDk3Npg_ssrnSgavrNZ3XzfS_Fvq0JA/exec'; 
 
 document.getElementById('ktaForm').addEventListener('submit', function(e) {
     e.preventDefault(); // Mencegah halaman reload
@@ -71,4 +71,5 @@ document.getElementById('ktaForm').addEventListener('submit', function(e) {
         // 5. Pastikan tombol kembali diaktifkan
         searchButton.disabled = false;
     });
+
 });
