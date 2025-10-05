@@ -19,11 +19,14 @@ document.getElementById('ktaForm').addEventListener('submit', function(e) {
     const formData = new FormData();
     formData.append('kta', nomorKTA); // Menambahkan Nomor KTA ke FormData
 
-    // 2. Kirim permintaan POST ke Google Apps Script (Web App)
+    // 2. Kirim permintaan ke Google Apps Script (Web App)
     fetch(webAppUrl, {
         method: 'POST',
-        // PENTING: Jangan set header 'Content-Type' saat menggunakan FormData!
-        body: formData 
+        // Mengirim data kembali sebagai JSON
+        body: JSON.stringify({ kta: nomorKTA }),
+        headers: {
+            'Content-Type': 'application/json' // PENTING: Kembali ke JSON
+        }
     })
     .then(response => {
         // Cek status respons
@@ -73,3 +76,4 @@ document.getElementById('ktaForm').addEventListener('submit', function(e) {
     });
 
 });
+
